@@ -16,10 +16,10 @@ def write_submission(submission_number, ids, probs):
 
 def main():
     tp = pd.read_csv('./data/train',dtype=unicode, iterator=True, chunksize=1000)
-    train_df = concat(list(tp), ignore_index=True)
+    train_df = pd.concat(list(tp), ignore_index=True)
 
     tp1 = pd.read_csv('./data/test',dtype=unicode, iterator=True, chunksize=1000)
-    test_df = concat(list(tp1), ignore_index=True)
+    test_df = pd.concat(list(tp1), ignore_index=True)
 
     #id,hour,C1,banner_pos,site_id,site_domain,site_category,app_id,app_domain,app_category,device_id,device_ip,device_model,device_type,device_conn_type,C14,C15,C16,C17,C18,C19,C20,C21
     #10000174058809263569,14103100,1005,0,235ba823,f6ebf28e,f028772b,ecad2386,7801e8d9,07d7df22,a99f214a,69f45779,0eb711ec,1,0,8330,320,50,761,3,175,100075,23
