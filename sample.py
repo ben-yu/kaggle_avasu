@@ -9,7 +9,7 @@ x_names = ["id","click","hour","C1","banner_pos","site_id","site_domain","site_c
 train_file = open(train,'rb')
 holdout = 40
 
-sample = open("sample.csv", 'w')
+sample = open("sample_data/train.csv", 'w')
 sample.write(next(train_file)) # write first row
 
 for t, row in enumerate(train_file):
